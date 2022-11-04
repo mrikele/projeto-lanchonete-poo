@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PROJETO DE POO - LANCHONETE
 
 > 🔴  Status do Projeto: em andamento ...
