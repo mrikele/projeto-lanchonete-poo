@@ -6,6 +6,14 @@ public class User {
     private String telefone;
     private String sexo;
     
+    public User(int id, String nome, String email, String telefone, String sexo){
+        this.id=id;
+        this.nome=nome;
+        this.email=email;
+        this.telefone=telefone;
+        this.sexo=sexo;
+    }
+
     public int getId() {
         return id;
     }
