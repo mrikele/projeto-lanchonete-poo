@@ -1,7 +1,4 @@
 public class Employee extends User {
-    public String nome;
-    public String endereco;
-    public int idade;
         
     
     public Employee(String nome, String endereco, int idade) {
