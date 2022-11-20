@@ -10,6 +10,8 @@ public class Employee extends User {
     @Override
     protected void acessarCardapio(){}
         // TODO Auto-generated method stub
+    
+    public void mudarCardapio(){}
 
     public void adicionarProduto(){}
         
