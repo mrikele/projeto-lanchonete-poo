@@ -1,7 +1,4 @@
 public class Client extends User{
-    public String nome;
-    public String endereco;
-    public int idade;
         
     
     public Client(String nome, String endereco, int idade) {
