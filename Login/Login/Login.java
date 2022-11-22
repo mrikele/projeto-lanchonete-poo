@@ -24,13 +24,19 @@ public class Login {
         this.senha = senha;
     }
 
-    public boolean verificaLogin() {
+    public boolean getLogin() {
         return estaLogado;
     }
 
-    public void setLogged(boolean estaLogado) {
+    public void setLogin(boolean estaLogado) {
         this.estaLogado = estaLogado;
     }
 
-    
+    public static synchronized Login getInstancia() { // apenas um login/ unica instancia de login
+        if (unicoLogin == null) {
+            unicoLogin = new Login();
+        }
+
+        return unicoLogin;
+    }
 }
