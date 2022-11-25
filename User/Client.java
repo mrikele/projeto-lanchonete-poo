@@ -10,6 +10,7 @@ public class Client extends User{
 
     @Override
     protected void acessarCardapio() {}
+        // TODO Auto-generated method stub
     
     public void fazerPedido(){}
     
