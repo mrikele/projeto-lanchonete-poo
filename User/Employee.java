@@ -1,7 +1,4 @@
 public class Employee extends User {
-    public String nome;
-    public String endereco;
-    public int idade;
         
     
     public Employee(String nome, String endereco, int idade) {
@@ -13,6 +10,8 @@ public class Employee extends User {
     @Override
     protected void acessarCardapio(){}
         // TODO Auto-generated method stub
+    
+    public void mudarCardapio(){}
 
     public void adicionarProduto(){}
         
