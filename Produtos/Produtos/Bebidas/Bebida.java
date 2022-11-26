@@ -1,6 +1,6 @@
 package Produtos.Bebidas;
 
-public class Bebida implements IBebidas{
+public abstract class Bebida implements IBebidas{
     private String nome;
     private double preco;
     

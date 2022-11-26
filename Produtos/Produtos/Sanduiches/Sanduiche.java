@@ -1,5 +1,5 @@
 package Produtos.Sanduiches;
-    
+
 public class Sanduiche implements ISanduiche{
     private double precoPao;
 
