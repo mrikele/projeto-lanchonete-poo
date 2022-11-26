@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public abstract class User {
     public String nome;
     public String endereco;
@@ -10,6 +12,6 @@ public abstract class User {
 
     }
     
-    protected abstract void acessarCardapio();
+    public abstract void acessCardapio() throws IOException;
 
 }

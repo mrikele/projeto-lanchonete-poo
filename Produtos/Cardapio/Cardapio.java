@@ -34,7 +34,7 @@ public class Cardapio {
         this.sanduiches = sanduiches;
     }
 
-    public String acessarCardapio() throws IOException{
+    public static String acessarCardapio() throws IOException{
         String cardapio = "Sanduiches:\n";
         ArrayList<String> sanduiches = CardapioAcesso.getCardapioSanduiches();
         ArrayList<String> bebidas = CardapioAcesso.getCardapioBebidas();

@@ -1,3 +1,6 @@
+import java.io.IOException;
+import Cardapio.Cardapio;
+
 public class Client extends User{
         
     
@@ -9,11 +12,11 @@ public class Client extends User{
     }
 
     @Override
-    protected void acessarCardapio() {}
-        // TODO Auto-generated method stub
+    public void acessCardapio() throws IOException {
+        Cardapio.acessarCardapio();
+    }
     
     public void fazerPedido(){}
-    
-    public void pagar(){}
+  
     
 }
