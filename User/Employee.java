@@ -13,11 +13,5 @@ public class Employee extends User {
     
     public void mudarCardapio(){}
 
-    public void adicionarProduto(){}
-        
-    public void removerProduto(){}
-    
-    public void verificaPedido(){}
-    
     
 }
