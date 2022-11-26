@@ -80,8 +80,13 @@ public class CardapioAcesso {
     }
 
     public static synchronized void setCardapioSanduiches(ArrayList<String> sanduiches) throws IOException{
-        FileWriter fw = new FileWriter(CardapioAcesso.sanduichesFile, true);
+        FileWriter fw = new FileWriter(CardapioAcesso.sanduichesFile, false);
         BufferedWriter bw = new BufferedWriter(fw);
+        bw.write("");
+        fw.close();
+        bw.close();
+        fw = new FileWriter(CardapioAcesso.sanduichesFile, true);
+        bw = new BufferedWriter(fw);
         for (String sanduiche : sanduiches) {
             bw.write(sanduiche);
             bw.newLine();
