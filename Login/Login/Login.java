@@ -1,12 +1,17 @@
 package Login;
 
+import java.io.IOException;
+
 public class Login {
     private static Login unicoLogin;
     private String usuario;
     private String senha;
     private boolean estaLogado = false;
+    private static AcessoLogin acessoLogin;
 
-    private Login() {}
+    private Login() {
+        acessoLogin = AcessoLogin.getAcessoLogin();
+    }
 
     public String getUsuario() {
         return usuario;
@@ -38,5 +43,13 @@ public class Login {
         }
 
         return unicoLogin;
+    }
+
+    public boolean cadastrar(String login, String senha) throws IOException{
+        return acessoLogin.cadastrarLogin(login, senha);
+    }
+
+    public boolean logar(String login, String senha) throws IOException{
+        return acessoLogin.fazerLogin(login, senha);
     }
 }
