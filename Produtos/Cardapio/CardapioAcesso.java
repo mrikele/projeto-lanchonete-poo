@@ -20,7 +20,7 @@ public class CardapioAcesso {
             try {
                 bebidasFile.createNewFile();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
+                
                 e.printStackTrace();
             }
         }
@@ -28,7 +28,7 @@ public class CardapioAcesso {
             try {
                 sanduichesFile.createNewFile();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
+                
                 e.printStackTrace();
             }
         }
