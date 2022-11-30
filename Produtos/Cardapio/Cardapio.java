@@ -3,27 +3,27 @@ package Cardapio;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import Produtos.Bebidas.Bebida;
+import Produtos.Bebidas.Suco.Suco;
 import Produtos.Sanduiches.Sanduiche;
 
 public class Cardapio {
-    private Bebida[] bebidas;
+    private Suco[] sucos;
     private Sanduiche[] sanduiches;
     
     public Cardapio() {
     }
 
-    public Cardapio(Bebida[] bebidas, Sanduiche[] sanduiches) {
-        this.bebidas = bebidas;
+    public Cardapio(Suco[] sucos, Sanduiche[] sanduiches) {
+        this.sucos = sucos;
         this.sanduiches = sanduiches;
     }
 
-    public Bebida[] getBebidas() {
-        return bebidas;
+    public Suco[] getSucos() {
+        return sucos;
     }
 
-    public void setBebidas(Bebida[] bebidas) {
-        this.bebidas = bebidas;
+    public void setSucos(Suco[] sucos) {
+        this.sucos = sucos;
     }
 
     public Sanduiche[] getSanduiches() {
@@ -37,19 +37,19 @@ public class Cardapio {
     public static String acessarCardapio() throws IOException{
         String cardapio = "Sanduiches:\n";
         ArrayList<String> sanduiches = CardapioAcesso.getCardapioSanduiches();
-        ArrayList<String> bebidas = CardapioAcesso.getCardapioBebidas();
+        ArrayList<String> Sucos = CardapioAcesso.getCardapioSucos();
         for (String sanduiche : sanduiches) {
             cardapio = cardapio+sanduiche+"\n";
         }
-        cardapio = cardapio+"\nBebidas:\n";
-        for (String bebida : bebidas) {
-            cardapio = cardapio+bebida;
+        cardapio = cardapio+"\nSucos:\n";
+        for (String Suco : Sucos) {
+            cardapio = cardapio+Suco;
         }
         return cardapio;
     }
 
-    public void mudarCardapio(ArrayList<String> bebidas, ArrayList<String> sanduiches) throws IOException{
+    public static void mudarCardapio(ArrayList<String> Sucos, ArrayList<String> sanduiches) throws IOException{
         CardapioAcesso.setCardapioSanduiches(sanduiches);
-        CardapioAcesso.setCardapioBebidas(bebidas);
+        CardapioAcesso.setCardapioSucos(Sucos);
     }
 }

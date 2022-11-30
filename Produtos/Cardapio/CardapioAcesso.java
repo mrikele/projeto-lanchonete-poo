@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 public class CardapioAcesso {
     private static CardapioAcesso cardapioAcesso;
-    private static File bebidasFile;
+    private static File sucosFile;
     private static File sanduichesFile;
 
     public CardapioAcesso() {
-        CardapioAcesso.bebidasFile = new File("Bebidas.txt");
+        CardapioAcesso.sucosFile = new File("sucos.txt");
         CardapioAcesso.sanduichesFile = new File("Sanduiches.txt");
-        if(!bebidasFile.exists()){
+        if(!sucosFile.exists()){
             try {
-                bebidasFile.createNewFile();
+                sucosFile.createNewFile();
             } catch (IOException e) {
-                
+                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -28,7 +28,7 @@ public class CardapioAcesso {
             try {
                 sanduichesFile.createNewFile();
             } catch (IOException e) {
-                
+                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -41,17 +41,17 @@ public class CardapioAcesso {
         return cardapioAcesso;
     }
 
-    public static synchronized ArrayList<String> getCardapioBebidas() throws IOException{
-        FileReader fr = new FileReader(CardapioAcesso.bebidasFile);
+    public static synchronized ArrayList<String> getCardapioSucos() throws IOException{
+        FileReader fr = new FileReader(CardapioAcesso.sucosFile);
         BufferedReader br = new BufferedReader(fr);
-        ArrayList<String> bebidas = new ArrayList<String>();
+        ArrayList<String> sucos = new ArrayList<String>();
         while(br.ready()){
             String linha = br.readLine();
-            bebidas.add(linha);
+            sucos.add(linha);
         }
         fr.close();
         br.close();
-        return bebidas;
+        return sucos;
     }
 
     public static synchronized ArrayList<String> getCardapioSanduiches() throws IOException{
@@ -67,11 +67,11 @@ public class CardapioAcesso {
         return sanduiches;
     }
 
-    public static synchronized void setCardapioBebidas(ArrayList<String> bebidas) throws IOException{
-        FileWriter fw = new FileWriter(CardapioAcesso.bebidasFile, true);
+    public static synchronized void setCardapioSucos(ArrayList<String> sucos) throws IOException{
+        FileWriter fw = new FileWriter(CardapioAcesso.sucosFile, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        for (String bebida : bebidas) {
-            bw.write(bebida);
+        for (String suco : sucos) {
+            bw.write(suco);
             bw.newLine();
         }
         
