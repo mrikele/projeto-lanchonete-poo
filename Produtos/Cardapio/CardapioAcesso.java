@@ -13,7 +13,7 @@ public class CardapioAcesso {
     private static File sucosFile;
     private static File sanduichesFile;
 
-    public CardapioAcesso() {
+    private CardapioAcesso() {
         CardapioAcesso.sucosFile = new File("sucos.txt");
         CardapioAcesso.sanduichesFile = new File("Sanduiches.txt");
         if(!sucosFile.exists()){
@@ -34,7 +34,7 @@ public class CardapioAcesso {
         }
     }
 
-    public static synchronized CardapioAcesso getCardapioAcesso() {
+    public static synchronized CardapioAcesso getInstance() {
         if(cardapioAcesso == null){
             cardapioAcesso = new CardapioAcesso();
         }
