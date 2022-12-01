@@ -11,6 +11,7 @@ Esse projeto tem como objetivo implementar um sistema que simula o funcionamento
 * Template Method;
 * Singleton;
 * Decorator;
+* Facade;
 * Strategy.
 
 ## 🛠️ Linguagem:
