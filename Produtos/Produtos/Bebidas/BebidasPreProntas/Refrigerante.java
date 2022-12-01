@@ -3,6 +3,7 @@ package Produtos.Bebidas.BebidasPreProntas;
 import Produtos.Bebidas.IBebidas;
 
 public abstract class Refrigerante implements IBebidas{
+    
     private String nome;
     private double preco;
 
@@ -25,6 +26,11 @@ public abstract class Refrigerante implements IBebidas{
         System.out.println("    "+nome+", "+preco+";");
         
     }
-
+    
+    @Override
+    public String toString() {
+        return nome+": "+preco+";";
+    }
+    
     
 }

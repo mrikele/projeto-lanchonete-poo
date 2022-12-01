@@ -22,7 +22,7 @@ public class MainProdutos {
     public MainProdutos() {
     }
 
-    public IProduto selecionarProduto(Scanner ler){
+    public static IProduto selecionarProduto(Scanner ler){
         System.out.println("Selecione o produto:");
         System.out.println("1-Sanduíche");
         System.out.println("2-Bebida Pronta");
@@ -43,7 +43,7 @@ public class MainProdutos {
 
     }
 
-    public IProduto selecionarBebidaPronta(Scanner ler){
+    public static IProduto selecionarBebidaPronta(Scanner ler){
         System.out.println("Selecione a bebida:");
         System.out.println("1-Coca Cola Lata");
         System.out.println("2-Guaraná Lata");
@@ -60,7 +60,7 @@ public class MainProdutos {
         return null;
     }
 
-    public IProduto selecionarSuco(Scanner ler){
+    public static IProduto selecionarSuco(Scanner ler){
         System.out.println("Selecione o suco:");
         System.out.println("1-Manga");
         System.out.println("2-Laranja");
@@ -77,7 +77,7 @@ public class MainProdutos {
         return null;
     }
 
-    public IProduto adicionarItensSuco(Scanner ler, IBebidas suco){
+    public static IProduto adicionarItensSuco(Scanner ler, IBebidas suco){
         while(true){
             System.out.println("Itens para adicionar ao suco:");
             System.out.println("1-Gelo");
@@ -103,7 +103,7 @@ public class MainProdutos {
         }
     }
 
-    public IProduto montarSanduiche(Scanner ler, ISanduiche sanduiche){
+    public static IProduto montarSanduiche(Scanner ler, ISanduiche sanduiche){
         while(true){
             System.out.println("Selecione o que colocar no pão:");
             System.out.println("1-Queijo");

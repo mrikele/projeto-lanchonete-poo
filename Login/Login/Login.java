@@ -10,7 +10,7 @@ public class Login {
     private static AcessoLogin acessoLogin;
 
     private Login() {
-        acessoLogin = AcessoLogin.getAcessoLogin();
+        acessoLogin = AcessoLogin.getInstance();
     }
 
     public String getUsuario() {

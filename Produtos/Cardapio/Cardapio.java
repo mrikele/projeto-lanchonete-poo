@@ -9,11 +9,14 @@ import Produtos.Sanduiches.Sanduiche;
 public class Cardapio {
     private Suco[] sucos;
     private Sanduiche[] sanduiches;
+    private CardapioAcesso cardapioAcesso;
     
     public Cardapio() {
+        cardapioAcesso = CardapioAcesso.getInstance();
     }
 
     public Cardapio(Suco[] sucos, Sanduiche[] sanduiches) {
+        cardapioAcesso = CardapioAcesso.getInstance();
         this.sucos = sucos;
         this.sanduiches = sanduiches;
     }

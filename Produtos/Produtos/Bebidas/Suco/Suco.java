@@ -38,7 +38,7 @@ public abstract class Suco implements IBebidas{
 
     @Override
     public String toString() {
-        return "Suco: "+nome+", ";
+        return nome+": "+preco+";";
     }
     
 }

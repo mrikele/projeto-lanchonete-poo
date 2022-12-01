@@ -24,7 +24,7 @@ public class AcessoLogin /*implements IAcessoLogin*/{
     }
 
     // @Override
-    public static synchronized AcessoLogin getAcessoLogin(){
+    public static synchronized AcessoLogin getInstance(){
         if(acessoLogin == null){
             acessoLogin = new AcessoLogin();
         }
