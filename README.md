@@ -22,7 +22,7 @@ Esse projeto tem como objetivo implementar um sistema que simula o funcionamento
 
 2️⃣. Clonar o repositório com o comando abaixo:
 ``` 
-git clone https://github.com/mrikele/PROJETO-POO.git 
+git clone https://github.com/mrikele/projeto-lanchonete-poo.git
 ```
 
 3️⃣. Abrir o vscode com o comando "code  ."
